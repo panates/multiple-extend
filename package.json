@@ -1,0 +1,47 @@
+{
+  "name": "multiple-extend",
+  "description": "Multiple inheritance for Javascript ES6",
+  "version": "0.0.1",
+  "author": "Panates Ltd.",
+  "contributors": [
+    "Eray Hanoglu <e.hanoglu@panates.com>"
+  ],
+  "main": "lib/index.js",
+  "types": "./lib/extend.d.ts",
+  "license": "MIT",
+  "repository": "panates/multiple-extend",
+  "keywords": [
+    "javascript",
+    "multiple",
+    "extend"
+  ],
+  "dependencies": {
+    "putil-merge": "^3.5.0"
+  },
+  "devDependencies": {
+    "babel-eslint": "^10.0.3",
+    "eslint": "^6.3.0",
+    "eslint-config-google": "^0.13.0",
+    "mocha": "^6.2.0",
+    "nyc": "^14.1.1"
+  },
+  "engines": {
+    "node": ">= 6.0"
+  },
+  "directories": {
+    "lib": "./lib"
+  },
+  "files": [
+    "LICENSE",
+    "README.md",
+    "lib/"
+  ],
+  "nyc": {
+    "temp-directory": "./coverage/.nyc_output"
+  },
+  "scripts": {
+    "test": "mocha --require ./test/support/env --reporter spec --bail --check-leaks test/",
+    "cover": "nyc --reporter html --reporter text npm run test",
+    "travis-cover": "nyc --reporter lcovonly npm run test"
+  }
+}
