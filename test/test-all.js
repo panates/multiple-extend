@@ -1,6 +1,7 @@
 /* eslint-disable */
 const assert = require('assert');
 const classes = require('../');
+const Implements = classes.Implements;
 
 describe('multiple-extend', function() {
 
@@ -187,6 +188,29 @@ describe('multiple-extend', function() {
     assert.strictEqual(player.walk(5), 5);
     assert.strictEqual(player.jump(5), 10);
     assert.strictEqual(player.dive(3), 3);
+  });
+
+  it('should check if a class is implemented', function() {
+    class A {
+      getA() {
+        return 'a';
+      }
+    }
+
+    class B {
+      getB() {
+        return 'b';
+      }
+    }
+
+    class Mixed extends classes(A, B) {
+    }
+
+    const mixed = new Mixed();
+    assert(mixed[Implements](A));
+    assert(mixed[Implements](B));
+    assert(mixed[Implements]('A'));
+    assert(mixed[Implements]('B'));
   });
 
 });

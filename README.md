@@ -70,6 +70,8 @@ if (player.dive(1)) // will dive 1
   player.dive(1);
 ```
 
+### Argument pass-through
+
 You can also define which arguments will be sent to subclass constructors
 ````js
 class SuperCharacter extends classes([Character, null], [Jumper, 1, 2], [Diver, [3, null]]) {
@@ -82,6 +84,27 @@ class SuperCharacter extends classes([Character, null], [Jumper, 1, 2], [Diver, 
 In the example above Character constructor will be no argument, 
 Jumper constructor will be called with arguments at index 1 and 2 (distanceMin, distanceMax),
 Diver constructor will be called with arguments at index from 3 to Last.
+
+### Checking implementations
+
+You can check if extended class and its instance has implemented any class.
+
+````js
+const classes = require('multiple-extend');
+const Implemented = classes.Implemented; // Special symb ol
+
+class SuperCharacter extends classes(Character, Jumper, Diver) {
+}
+
+if (SuperCharacter[Implemented](Jumper))
+  console.log('Jumper implemented');
+
+// You can also check using class names
+if (SuperCharacter[Implemented]('Diver'))
+  console.log('Diver implemented');
+````
+
+
 
 ## Node Compatibility
 

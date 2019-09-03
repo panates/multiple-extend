@@ -9,11 +9,15 @@
   "main": "lib/index.js",
   "types": "./lib/extend.d.ts",
   "license": "MIT",
-  "repository": "panates/multiple-extend",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/panates/multiple-extend.git"
+  },
   "keywords": [
     "javascript",
     "multiple",
-    "extend"
+    "extend",
+    "inheritance"
   ],
   "dependencies": {
     "putil-merge": "^3.5.0"

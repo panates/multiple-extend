@@ -1,5 +1,6 @@
 declare module "multiple-extend" {
-    function extendAll(...proto: any[]);
 
-    export = extendAll;
+    export const Implements: unique symbol;
+    export default function classes(...proto: any[]);
+
 }
