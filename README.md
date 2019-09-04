@@ -60,13 +60,13 @@ class SuperCharacter extends classes(Character, Jumper, Diver) {
 const player = new SuperCharacter('player1');
 console.log(player.name); // Prints out "player1"
 
-if (player.canWalk) // will walk 5
+if (player.canWalk) // Can walk and will walk 5
   player.walk(5);
 
-if (player.canJump) // will jump 1
+if (player.canJump) // Can jump and will jump 1
   player.jump(1);
 
-if (player.dive(1)) // will dive 1
+if (player.canDive) // Can dive and will dive 1
   player.dive(1);
 ```
 
