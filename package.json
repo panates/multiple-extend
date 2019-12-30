@@ -20,14 +20,14 @@
     "inheritance"
   ],
   "dependencies": {
-    "putil-merge": "^3.5.0"
+    "putil-merge": "^3.5.1"
   },
   "devDependencies": {
     "babel-eslint": "^10.0.3",
-    "eslint": "^6.3.0",
-    "eslint-config-google": "^0.13.0",
-    "mocha": "^6.2.0",
-    "nyc": "^14.1.1"
+    "eslint": "^6.8.0",
+    "eslint-config-google": "^0.14.0",
+    "mocha": "^6.2.2",
+    "nyc": "^15.0.0"
   },
   "engines": {
     "node": ">= 6.0"

@@ -139,7 +139,7 @@ describe('multiple-extend', function() {
     assert.strictEqual(mixed.c2, 3);
   });
 
-  it('should call super constructors with chosen argument ranges', function() {
+  it('should mix all', function() {
     class Character {
       constructor(name) {
         this.name = name;
