@@ -7,7 +7,7 @@
     "Eray Hanoglu <e.hanoglu@panates.com>"
   ],
   "main": "lib/index.js",
-  "types": "./lib/extend.d.ts",
+  "types": "./lib/index.d.ts",
   "license": "MIT",
   "repository": {
     "type": "git",
