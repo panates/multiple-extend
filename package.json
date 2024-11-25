@@ -20,12 +20,12 @@
     "inheritance"
   ],
   "dependencies": {
-    "putil-merge": "^3.10.1"
+    "@jsopen/objects": "^1.4.2"
   },
   "devDependencies": {
-    "eslint": "^8.31.0",
-    "eslint-config-google": "^0.14.0",
-    "mocha": "^10.2.0",
+    "@panates/eslint-config": "^1.0.21",
+    "eslint": "^8.57.1",
+    "mocha": "^10.8.2",
     "nyc": "^15.1.0"
   },
   "engines": {
